@@ -26,7 +26,7 @@
             --btn-whatsapp: #25d366;
         }
 
-        /* 1. Left-to-Right Slide Out Entry Screen */
+        /* Fast Left-to-Right Entry Screen */
         #splash-screen {
             position: fixed;
             top: 0;
@@ -39,10 +39,9 @@
             justify-content: center;
             align-items: center;
             z-index: 99999;
-            transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1), opacity 0.8s ease;
+            transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
         }
 
-        /* Class added via JS to slide out from left to right */
         #splash-screen.slide-out {
             transform: translateX(100%);
             opacity: 0;
@@ -117,7 +116,7 @@
             justify-content: center;
             align-items: center;
             text-transform: uppercase;
-            transition: all 0.4s ease;
+            transition: all 0.3s ease;
             animation: circlePulse 2s infinite;
         }
 
@@ -134,7 +133,6 @@
             100% { box-shadow: 0 0 0 0 rgba(0, 242, 254, 0); }
         }
 
-        /* Main Website Content Styles */
         header {
             background-color: #121212;
             padding: 25px;
@@ -196,7 +194,6 @@
             transform: translateY(-3px);
         }
 
-        /* Products Grid */
         .section-title {
             font-size: 24px;
             margin: 40px 0 25px 0;
@@ -346,7 +343,7 @@
         <div class="splash-brand-title">KHASS COLLECTIONS</div>
         <div class="splash-brand-sub">Premium Gen Z Streetwear</div>
 
-        <button class="enter-circle-btn" onclick="enterWebsite()">ENTER</button>
+        <button class="enter-circle-btn" id="enterBtn" onclick="enterWebsite()">ENTER</button>
     </div>
 
     <header>KHASS COLLECTIONS</header>
@@ -490,28 +487,31 @@
     </footer>
 
     <script>
-        var audio = new Audio('music.mp3');
-        audio.loop = true;
-
         function enterWebsite() {
-            // Play background music
-            audio.play().catch(function(error) {
-                console.log("Audio play failed:", error);
-            });
-
-            // Slide out animation
             var splash = document.getElementById('splash-screen');
             if (splash) {
+                // Instantly slide out
                 splash.classList.add('slide-out');
+                // Remove completely from view
                 setTimeout(function() {
                     splash.style.display = 'none';
-                }, 800);
+                }, 600);
             }
+
+            // Play background music safely without blocking UI
+            try {
+                var audio = new Audio('music.mp3');
+                audio.loop = true;
+                audio.play().catch(function(e) {
+                    console.log("Audio skipped due to browser policy.");
+                });
+            } catch(e) {}
         }
     </script>
 
 </body>
 </html>
+
 
 
 
