@@ -21,7 +21,7 @@
             color: #2ec4b6;
         }
         .hero {
-            padding: 40px 20px;
+            padding: 30px 20px;
         }
         .hero h1 {
             font-size: 32px;
@@ -31,6 +31,18 @@
         .hero p {
             color: #aaa;
             font-size: 16px;
+            margin-bottom: 15px;
+        }
+        .delivery-banner {
+            background-color: #1f1f1f;
+            border: 1px solid #ff9f1c;
+            color: #ff9f1c;
+            padding: 12px 20px;
+            border-radius: 10px;
+            display: inline-block;
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 10px;
         }
         .products-container {
             display: flex;
@@ -50,7 +62,7 @@
         .product-card img {
             width: 100%;
             border-radius: 8px;
-            height: 250px;
+            height: 280px;
             object-fit: cover;
         }
         .product-title {
@@ -60,7 +72,7 @@
         }
         .price {
             font-size: 18px;
-            margin-bottom: 15px;
+            margin-bottom: 5px;
         }
         .old-price {
             text-decoration: line-through;
@@ -71,17 +83,29 @@
             color: #25d366;
             font-weight: bold;
         }
-        .btn {
+        .size-tag {
+            color: #2ec4b6;
+            font-size: 14px;
+            font-weight: bold;
+            margin: 5px 0;
+        }
+        .delivery-info {
+            color: #bbb;
+            font-size: 12px;
+            margin-bottom: 15px;
+        }
+        .btn-whatsapp {
             background-color: #25d366;
             color: #000;
-            padding: 10px 20px;
-            border-radius: 20px;
-            font-size: 16px;
+            padding: 12px 20px;
+            border-radius: 25px;
+            font-size: 15px;
             font-weight: bold;
             text-decoration: none;
-            display: inline-block;
+            display: block;
+            margin: 0 auto;
         }
-        .btn:hover {
+        .btn-whatsapp:hover {
             background-color: #1ebd59;
         }
     </style>
@@ -93,28 +117,48 @@
     <div class="hero">
         <h1>Gen Z Oversized T-Shirts</h1>
         <p>Premium Quality Graphic & Drop Shoulder Tees</p>
+        <div class="delivery-banner">
+            🚚 <b>Delivery:</b> Within 1 Week All Over Pakistan<br>
+            💳 <b>Payment:</b> Rs. 350 Delivery Charges Advance (Cash on Delivery Available for Shirt Price)
+        </div>
     </div>
 
     <div class="products-container">
 
         <div class="product-card">
-            <img src="https://via.placeholder.com/300x300?text=T-Shirt+1" alt="T-Shirt 1">
-            <div class="product-title">Oversized Black Tee</div>
+            <img src="1786083754541.png" alt="T-Shirt 1">
+            <div class="product-title">Oversized Graphic Tee</div>
             <div class="price">
                 <span class="old-price">Rs. 1,599</span>
                 <span class="new-price">Rs. 1,099</span>
             </div>
-            <a href="https://wa.me/923108127937?text=Hello%21%20I%20want%20to%20order%20Oversized%20Black%20Tee" class="btn">Order on WhatsApp</a>
+            <div class="size-tag">Sizes: Medium | Large | XL</div>
+            <div class="delivery-info">Delivery within 1 week | Rs. 350 Advance Delivery</div>
+            <a href="https://wa.me/923108127937?text=Hello%21%20I%20want%20to%20order%20Oversized%20Graphic%20Tee%20%28Rs.%201099%20%2B%20Rs.%20350%20Advance%20Delivery%29" class="btn-whatsapp">Order on WhatsApp</a>
         </div>
 
         <div class="product-card">
-            <img src="https://via.placeholder.com/300x300?text=T-Shirt+2" alt="T-Shirt 2">
-            <div class="product-title">Graphic Anime Tee</div>
+            <img src="1786083849680.png" alt="T-Shirt 2">
+            <div class="product-title">Drop Shoulder Tee</div>
             <div class="price">
                 <span class="old-price">Rs. 1,799</span>
                 <span class="new-price">Rs. 1,299</span>
             </div>
-            <a href="https://wa.me/923108127937?text=Hello%21%20I%20want%20to%20order%20Graphic%20Anime%20Tee" class="btn">Order on WhatsApp</a>
+            <div class="size-tag">Sizes: Medium | Large | XL</div>
+            <div class="delivery-info">Delivery within 1 week | Rs. 350 Advance Delivery</div>
+            <a href="https://wa.me/923108127937?text=Hello%21%20I%20want%20to%20order%20Drop%20Shoulder%20Tee%20%28Rs.%201299%20%2B%20Rs.%20350%20Advance%20Delivery%29" class="btn-whatsapp">Order on WhatsApp</a>
+        </div>
+
+        <div class="product-card">
+            <img src="1786083916050.png" alt="T-Shirt 3">
+            <div class="product-title">Anime Oversized Tee</div>
+            <div class="price">
+                <span class="old-price">Rs. 1,699</span>
+                <span class="new-price">Rs. 1,199</span>
+            </div>
+            <div class="size-tag">Sizes: Medium | Large | XL</div>
+            <div class="delivery-info">Delivery within 1 week | Rs. 350 Advance Delivery</div>
+            <a href="https://wa.me/923108127937?text=Hello%21%20I%20want%20to%20order%20Anime%20Oversized%20Tee%20%28Rs.%201199%20%2B%20Rs.%20350%20Advance%20Delivery%29" class="btn-whatsapp">Order on WhatsApp</a>
         </div>
 
     </div>
