@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GenZ T-Shirts | Freedom Sale</title>
+    <title>Khass Collections | Gen Z Clothing</title>
     <style>
         body {
             margin: 0;
-            font-family: 'Arial', sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #121212;
             color: #ffffff;
             text-align: center;
@@ -15,76 +15,108 @@
         header {
             background-color: #1f1f1f;
             padding: 20px;
-            font-size: 24px;
+            font-size: 26px;
             font-weight: bold;
             letter-spacing: 2px;
+            color: #2ec4b6;
         }
         .hero {
-            padding: 50px 20px;
+            padding: 40px 20px;
         }
         .hero h1 {
-            font-size: 36px;
-            color: #2ec4b6;
+            font-size: 32px;
+            color: #ffffff;
             margin-bottom: 10px;
         }
-        .sale-banner {
-            background: linear-gradient(90deg, #075e54, #128c7e);
-            color: #ffffff;
+        .hero p {
+            color: #aaa;
+            font-size: 16px;
+        }
+        .products-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        .product-card {
+            background-color: #1f1f1f;
+            border-radius: 12px;
+            width: 280px;
             padding: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+            text-align: center;
+        }
+        .product-card img {
+            width: 100%;
+            border-radius: 8px;
+            height: 250px;
+            object-fit: cover;
+        }
+        .product-title {
             font-size: 20px;
             font-weight: bold;
-            margin: 20px 0;
-            border-radius: 8px;
-            display: inline-block;
+            margin: 10px 0 5px 0;
         }
         .price {
-            font-size: 22px;
-            margin-top: 10px;
+            font-size: 18px;
+            margin-bottom: 15px;
         }
         .old-price {
             text-decoration: line-through;
             color: #ff4d4d;
-            margin-right: 10px;
+            margin-right: 8px;
         }
         .new-price {
             color: #25d366;
-            font-size: 28px;
             font-weight: bold;
         }
         .btn {
             background-color: #25d366;
             color: #000;
-            padding: 12px 30px;
-            border: none;
-            border-radius: 25px;
-            font-size: 18px;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 16px;
             font-weight: bold;
-            cursor: pointer;
-            margin-top: 20px;
             text-decoration: none;
             display: inline-block;
+        }
+        .btn:hover {
+            background-color: #1ebd59;
         }
     </style>
 </head>
 <body>
 
-    <header>GEN Z CLOTHING</header>
+    <header>KHASS COLLECTIONS</header>
 
     <div class="hero">
-        <h1>Oversized & Drop Shoulder T-Shirts</h1>
-        <p>Premium Quality Graphic Tees for Gen Z</p>
-        
-        <div class="sale-banner">
-            🇵🇰 AZADI SALE IS LIVE! 🇵🇰
+        <h1>Gen Z Oversized T-Shirts</h1>
+        <p>Premium Quality Graphic & Drop Shoulder Tees</p>
+    </div>
+
+    <div class="products-container">
+
+        <div class="product-card">
+            <img src="https://via.placeholder.com/300x300?text=T-Shirt+1" alt="T-Shirt 1">
+            <div class="product-title">Oversized Black Tee</div>
+            <div class="price">
+                <span class="old-price">Rs. 1,599</span>
+                <span class="new-price">Rs. 1,099</span>
+            </div>
+            <a href="https://wa.me/923108127937?text=Hello%21%20I%20want%20to%20order%20Oversized%20Black%20Tee" class="btn">Order on WhatsApp</a>
         </div>
 
-        <div class="price">
-            <span class="old-price">Rs. 1,599</span>
-            <span class="new-price">Rs. 1,099</span>
+        <div class="product-card">
+            <img src="https://via.placeholder.com/300x300?text=T-Shirt+2" alt="T-Shirt 2">
+            <div class="product-title">Graphic Anime Tee</div>
+            <div class="price">
+                <span class="old-price">Rs. 1,799</span>
+                <span class="new-price">Rs. 1,299</span>
+            </div>
+            <a href="https://wa.me/923108127937?text=Hello%21%20I%20want%20to%20order%20Graphic%20Anime%20Tee" class="btn">Order on WhatsApp</a>
         </div>
 
-        <br>
-        <a href="#" class="btn">Order Now on WhatsApp</a>
     </div>
 
 </body>
