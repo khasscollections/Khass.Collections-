@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Khass Collections | Gen Z Clothing</title>
     <style>
+        * {
+            box-sizing: border-box;
+        }
         body {
             margin: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -19,6 +22,7 @@
             font-weight: bold;
             letter-spacing: 2px;
             color: #2ec4b6;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.5);
         }
         .hero {
             padding: 30px 20px;
@@ -31,7 +35,7 @@
         .hero p {
             color: #aaa;
             font-size: 16px;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
         .delivery-banner {
             background-color: #1f1f1f;
@@ -42,14 +46,40 @@
             display: inline-block;
             font-size: 14px;
             line-height: 1.6;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
+        .community-btn {
+            display: inline-block;
+            background-color: #25d366;
+            color: #000;
+            font-weight: bold;
+            padding: 12px 24px;
+            border-radius: 30px;
+            text-decoration: none;
+            margin-top: 10px;
+            font-size: 15px;
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+        }
+        .community-btn:hover {
+            background-color: #1ebd59;
+        }
+
+        /* Section Headings */
+        .section-title {
+            font-size: 24px;
+            margin: 40px 0 20px 0;
+            color: #2ec4b6;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Products Section */
         .products-container {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             gap: 20px;
-            padding: 20px;
+            padding: 0 20px;
         }
         .product-card {
             background-color: #1f1f1f;
@@ -58,6 +88,7 @@
             padding: 15px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.5);
             text-align: center;
+            border: 1px solid #2a2a2a;
         }
         .product-card img {
             width: 100%;
@@ -66,11 +97,12 @@
             object-fit: cover;
         }
         .product-title {
-            font-size: 16px;
+            font-size: 15px;
             font-weight: bold;
             margin: 10px 0 5px 0;
             color: #ffffff;
             line-height: 1.4;
+            min-height: 42px;
         }
         .price {
             font-size: 18px;
@@ -110,6 +142,71 @@
         .btn-whatsapp:hover {
             background-color: #1ebd59;
         }
+
+        /* Reviews Section */
+        .reviews-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            padding: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .review-card {
+            background-color: #1f1f1f;
+            border-left: 4px solid #2ec4b6;
+            border-radius: 8px;
+            padding: 15px;
+            width: 280px;
+            text-align: left;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+        .review-stars {
+            color: #ff9f1c;
+            margin-bottom: 8px;
+        }
+        .review-text {
+            font-size: 14px;
+            color: #ddd;
+            line-height: 1.4;
+            font-style: italic;
+        }
+        .review-user {
+            font-size: 12px;
+            color: #888;
+            margin-top: 10px;
+            text-align: right;
+            font-weight: bold;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1f1f1f;
+            padding: 30px 20px;
+            margin-top: 50px;
+            border-top: 1px solid #2a2a2a;
+        }
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 15px;
+            flex-wrap: wrap;
+        }
+        .footer-btn {
+            background-color: #2a2a2a;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 14px;
+            border: 1px solid #333;
+        }
+        .footer-btn:hover {
+            background-color: #333;
+            color: #2ec4b6;
+        }
     </style>
 </head>
 <body>
@@ -119,12 +216,18 @@
     <div class="hero">
         <h1>Gen Z Oversized T-Shirts</h1>
         <p>Premium Quality Graphic & Drop Shoulder Tees</p>
+        
         <div class="delivery-banner">
             🚚 <b>Delivery:</b> Within 1 Week All Over Pakistan<br>
             💳 <b>Payment:</b> Rs. 350 Delivery Charges Advance (Cash on Delivery Available for Shirt Price)
         </div>
+        <br>
+        <a href="https://chat.whatsapp.com/EmFtyz1i2QD0IkFC3jJ4fb" target="_blank" class="community-btn">
+            💬 Join Our WhatsApp VIP Community
+        </a>
     </div>
 
+    <h2 class="section-title">Trending Collection</h2>
     <div class="products-container">
 
         <div class="product-card">
@@ -149,5 +252,132 @@
             <img src="1786083916050.png" alt="Spider-Man Oversized Down Shoulder T-Shirt">
             <div class="product-title">Spider-Man Oversized Down Shoulder T-Shirt</div>
             <div class="price"><span class="old-price">Rs. 1,799</span><span class="new-price">Rs. 1,199</span></div>
-            
+            <div class="size-tag">Sizes: Medium | Large | XL</div>
+            <div class="delivery-info">Delivery within 1 week | Rs. 350 Advance Delivery</div>
+            <a href="https://wa.me/923108127937?text=Hello%21%20I%20want%20to%20order%20Spider-Man%20Oversized%20Down%20Shoulder%20T-Shirt%20%28Rs.%201199%20%2B%20Rs.%20350%20Advance%20Delivery%29" class="btn-whatsapp">Order on WhatsApp</a>
+        </div>
+
+        <div class="product-card">
+            <img src="1786084327567.png" alt="Porsche 911 Car Lovers Oversized Down Shoulder T-Shirt">
+            <div class="product-title">Porsche 911 Car Lovers Oversized Down Shoulder T-Shirt</div>
+            <div class="price"><span class="old-price">Rs. 1,799</span><span class="new-price">Rs. 1,199</span></div>
+            <div class="size-tag">Sizes: Medium | Large | XL</div>
+            <div class="delivery-info">Delivery within 1 week | Rs. 350 Advance Delivery</div>
+            <a href="https://wa.me/923108127937?text=Hello%21%20I%20want%20to%20order%20Porsche%20911%20Car%20Lovers%20Oversized%20Down%20Shoulder%20T-Shirt%20%28Rs.%201199%20%2B%20Rs.%20350%20Advance%20Delivery%29" class="btn-whatsapp">Order on WhatsApp</a>
+        </div>
+
+        <div class="product-card">
+            <img src="1786096084570.png" alt="Luffy Gear 5 Down Shoulder Oversized T-Shirt">
+            <div class="product-title">Luffy Gear 5 Down Shoulder Oversized T-Shirt</div>
+            <div class="price"><span class="old-price">Rs. 1,799</span><span class="new-price">Rs. 1,199</span></div>
+            <div class="size-tag">Sizes: Medium | Large | XL</div>
+            <div class="delivery-info">Delivery within 1 week | Rs. 350 Advance Delivery</div>
+            <a href="https://wa.me/923108127937?text=Hello%21%20I%20want%20to%20order%20Luffy%20Gear%205%20Down%20Shoulder%20Oversized%20T-Shirt%20%28Rs.%201199%20%2B%20Rs.%20350%20Advance%20Delivery%29" class="btn-whatsapp">Order on WhatsApp</a>
+        </div>
+
+        <div class="product-card">
+            <img src="1786096274108.png" alt="Sabr Gift From God Oversized Down Shoulder T-Shirt">
+            <div class="product-title">Sabr - Gift From God Oversized Down Shoulder T-Shirt</div>
+            <div class="price"><span class="old-price">Rs. 1,799</span><span class="new-price">Rs. 1,199</span></div>
+            <div class="size-tag">Sizes: Medium | Large | XL</div>
+            <div class="delivery-info">Delivery within 1 week | Rs. 350 Advance Delivery</div>
+            <a href="https://wa.me/923108127937?text=Hello%21%20I%20want%20to%20order%20Sabr%20Gift%20From%20God%20Oversized%20T-Shirt%20%28Rs.%201199%20%2B%20Rs.%20350%20Advance%20Delivery%29" class="btn-whatsapp">Order on WhatsApp</a>
+        </div>
+
+        <div class="product-card">
+            <img src="1786096680372.png" alt="Tawakkal On God Oversized Down Shoulder T-Shirt">
+            <div class="product-title">Tawakkal On God Oversized Down Shoulder T-Shirt</div>
+            <div class="price"><span class="old-price">Rs. 1,799</span><span class="new-price">Rs. 1,199</span></div>
+            <div class="size-tag">Sizes: Medium | Large | XL</div>
+            <div class="delivery-info">Delivery within 1 week | Rs. 350 Advance Delivery</div>
+            <a href="https://wa.me/923108127937?text=Hello%21%20I%20want%20to%20order%20Tawakkal%20On%20God%20Oversized%20Down%20Shoulder%20T-Shirt%20%28Rs.%201199%20%2B%20Rs.%20350%20Advance%20Delivery%29" class="btn-whatsapp">Order on WhatsApp</a>
+        </div>
+
+        <div class="product-card">
+            <img src="1786096734900.png" alt="Zindagi Down Shoulder Oversized 100% Cotton T-Shirt">
+            <div class="product-title">Zindagi Down Shoulder Oversized (100% Cotton) T-Shirt</div>
+            <div class="price"><span class="old-price">Rs. 1,799</span><span class="new-price">Rs. 1,199</span></div>
+            <div class="size-tag">Sizes: Medium | Large | XL</div>
+            <div class="delivery-info">Delivery within 1 week | Rs. 350 Advance Delivery</div>
+            <a href="https://wa.me/923108127937?text=Hello%21%20I%20want%20to%20order%20Zindagi%20Down%20Shoulder%20Oversized%20100%25%20Cotton%20%28Rs.%201199%20%2B%20Rs.%20350%20Advance%20Delivery%29" class="btn-whatsapp">Order on WhatsApp</a>
+        </div>
+
+        <div class="product-card">
+            <img src="1786096821470.png" alt="Ferrari F1 Formula Car Driver Oversized Shirt">
+            <div class="product-title">Ferrari F1 Formula Car Driver Oversized Down Shoulder Shirt</div>
+            <div class="price"><span class="old-price">Rs. 1,799</span><span class="new-price">Rs. 1,199</span></div>
+            <div class="size-tag">Sizes: Medium | Large | XL</div>
+            <div class="delivery-info">Delivery within 1 week | Rs. 350 Advance Delivery</div>
+            <a href="https://wa.me/923108127937?text=Hello%21%20I%20want%20to%20order%20Ferrari%20F1%20Formula%20Car%20Driver%20Shirt%20%28Rs.%201199%20%2B%20Rs.%20350%20Advance%20Delivery%29" class="btn-whatsapp">Order on WhatsApp</a>
+        </div>
+
+        <div class="product-card">
+            <img src="1786096883010.png" alt="23 Formula Car Driver 100% Cotton Oversized Shirt">
+            <div class="product-title">23 Formula Car Driver (100% Cotton) Oversized Shirt</div>
+            <div class="price"><span class="old-price">Rs. 1,799</span><span class="new-price">Rs. 1,199</span></div>
+            <div class="size-tag">Sizes: Medium | Large | XL</div>
+            <div class="delivery-info">Delivery within 1 week | Rs. 350 Advance Delivery</div>
+            <a href="https://wa.me/923108127937?text=Hello%21%20I%20want%20to%20order%2023%20Formula%20Car%20Driver%20Shirt%20%28Rs.%201199%20%2B%20Rs.%20350%20Advance%20Delivery%29" class="btn-whatsapp">Order on WhatsApp</a>
+        </div>
+
+        <div class="product-card">
+            <img src="1786178060059.png" alt="86 New York 100% Cotton Oversized Down Shoulder T-Shirt">
+            <div class="product-title">86 New York (100% Cotton) Oversized Down Shoulder T-Shirt</div>
+            <div class="price"><span class="old-price">Rs. 1,799</span><span class="new-price">Rs. 1,199</span></div>
+            <div class="size-tag">Sizes: Medium | Large | XL</div>
+            <div class="delivery-info">Delivery within 1 week | Rs. 350 Advance Delivery</div>
+            <a href="https://wa.me/923108127937?text=Hello%21%20I%20want%20to%20order%2086%20New%20York%20100%25%20Cotton%20T-Shirt%20%28Rs.%201199%20%2B%20Rs.%20350%20Advance%20Delivery%29" class="btn-whatsapp">Order on WhatsApp</a>
+        </div>
+
+        <div class="product-card">
+            <img src="1786178380862.png" alt="Goku Anime Lover Down Shoulder Oversized 100% Cotton T-Shirt">
+            <div class="product-title">Goku Anime Lover Down Shoulder Oversized (100% Cotton) T-Shirt</div>
+            <div class="price"><span class="old-price">Rs. 1,799</span><span class="new-price">Rs. 1,199</span></div>
+            <div class="size-tag">Sizes: Medium | Large | XL</div>
+            <div class="delivery-info">Delivery within 1 week | Rs. 350 Advance Delivery</div>
+            <a href="https://wa.me/923108127937?text=Hello%21%20I%20want%20to%20order%20Goku%20Anime%20Lover%20Down%20Shoulder%20Oversized%20T-Shirt%20%28Rs.%201199%20%2B%20Rs.%20350%20Advance%20Delivery%29" class="btn-whatsapp">Order on WhatsApp</a>
+        </div>
+
+    </div>
+
+    <h2 class="section-title">What Our Customers Say</h2>
+    <div class="reviews-container">
+        
+        <div class="review-card">
+            <div class="review-stars">⭐⭐⭐⭐⭐</div>
+            <div class="review-text">"Nice stuff or packing bhi acchi ha 10/10. Received my parcel safely!"</div>
+            <div class="review-user">— Verified Customer</div>
+        </div>
+
+        <div class="review-card">
+            <div class="review-stars">⭐⭐⭐⭐⭐</div>
+            <div class="review-text">"Bhai shukriya achi Hain shirts. Stuff bara Acha hay A1 🔥"</div>
+            <div class="review-user">— Verified Customer</div>
+        </div>
+
+        <div class="review-card">
+            <div class="review-stars">⭐⭐⭐⭐⭐</div>
+            <div class="review-text">"Received my parcel! Thank you so much. It's very pretty!! I appreciate ur efforts."</div>
+            <div class="review-user">— Happy Buyer</div>
+        </div>
+
+        <div class="review-card">
+            <div class="review-stars">⭐⭐⭐⭐⭐</div>
+            <div class="review-text">"You have done amazing job ❤️ your hardwork and dedication is seen."</div>
+            <div class="review-user">— Verified Customer</div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p style="font-weight: bold; color: #2ec4b6;">KHASS COLLECTIONS</p>
+        <p style="font-size: 13px; color: #888;">Connect with us on Social Media</p>
+        <div class="footer-links">
+            <a href="https://www.tiktok.com/@khass.collections?_r=1&_t=ZS-98iB20Wpqz9" target="_blank" class="footer-btn">🎵 Follow on TikTok</a>
+            <a href="https://chat.whatsapp.com/EmFtyz1i2QD0IkFC3jJ4fb" target="_blank" class="footer-btn">💬 Join WhatsApp Group</a>
+        </div>
+    </footer>
+
+</body>
+</html>
 
