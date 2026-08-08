@@ -228,7 +228,7 @@
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 12px;
-            padding: 0 10px 50px 10px;
+            padding: 0 10px 30px 10px;
             max-width: 700px;
             margin: 0 auto;
         }
@@ -323,6 +323,80 @@
             margin: 0 auto;
         }
 
+        /* Custom Design Section Box */
+        .custom-design-section {
+            background: linear-gradient(135deg, #141414, #1f1f1f);
+            border: 2px dashed var(--main-neon);
+            border-radius: 16px;
+            max-width: 680px;
+            margin: 30px auto;
+            padding: 25px 20px;
+            box-shadow: 0 0 30px rgba(0, 242, 254, 0.15);
+            text-align: left;
+        }
+
+        .custom-design-section h3 {
+            color: var(--main-neon);
+            font-size: 20px;
+            text-transform: uppercase;
+            text-align: center;
+            margin-bottom: 8px;
+        }
+
+        .custom-design-section p {
+            color: #cccccc;
+            font-size: 13px;
+            text-align: center;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 13px;
+            color: #aaaaaa;
+            margin-bottom: 5px;
+        }
+
+        .form-control {
+            width: 100%;
+            background-color: #0c0c0c;
+            border: 1px solid #333333;
+            border-radius: 8px;
+            padding: 10px 12px;
+            color: #ffffff;
+            font-size: 14px;
+        }
+
+        .form-control:focus {
+            border-color: var(--main-neon);
+            outline: none;
+        }
+
+        .custom-submit-btn {
+            background-color: var(--btn-whatsapp);
+            color: #ffffff;
+            border: none;
+            width: 100%;
+            padding: 12px;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            text-transform: uppercase;
+            margin-top: 10px;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            transition: transform 0.2s ease;
+        }
+
+        .custom-submit-btn:hover {
+            transform: scale(1.02);
+        }
+
         /* Live Sales Popup Notification Style */
         #live-popup {
             position: fixed;
@@ -358,7 +432,7 @@
             padding: 40px 15px;
             border-top: 1px solid #222222;
             border-bottom: 1px solid #222222;
-            margin-top: 20px;
+            margin-top: 30px;
         }
 
         .reviews-container {
@@ -555,6 +629,7 @@
             <div class="price"><span class="old-price">Rs. 1,799</span><span class="new-price">Rs. 1,199</span></div>
             <div class="size-tag">Sizes: M | L | XL</div>
             <div class="delivery-info">Delivery: within 1 week</div>
+            <div class="delivery-info">Delivery: within 1 week</div>
             <a href="https://wa.me/923108127937?text=Hello%21%20I%20want%20to%20order%20Ferrari%20F1%20T-Shirt%20%28Rs.%201199%29" class="btn-whatsapp-order">Order on WhatsApp</a>
         </div>
 
@@ -585,6 +660,25 @@
             <a href="https://wa.me/923108127937?text=Hello%21%20I%20want%20to%20order%20Goku%20Anime%20T-Shirt%20%28Rs.%201199%29" class="btn-whatsapp-order">Order on WhatsApp</a>
         </div>
 
+    </div>
+
+    <div class="custom-design-section">
+        <h3>🎨 Want a Custom Design T-Shirt?</h3>
+        <p>Apna pasandeeda design ya logo bhejen! Price <b>Rs. 1,799 say Rs. 2,500</b> tak hoti hai jo ke print ke size aur fabric ke hisaab say decide hoti hai.</p>
+        
+        <div class="form-group">
+            <label for="custName">Aap ka Naam:</label>
+            <input type="text" id="custName" class="form-control" placeholder="Enter your full name">
+        </div>
+        <div class="form-group">
+            <label for="custPhone">Aap ka Phone Number:</label>
+            <input type="text" id="custPhone" class="form-control" placeholder="Enter your WhatsApp number">
+        </div>
+        <div class="form-group">
+            <label for="custDetails">Design / Instructions Details:</label>
+            <textarea id="custDetails" class="form-control" rows="3" placeholder="Bataen ke aapko kaisa design chahiye (Color, Size, Placement etc.)"></textarea>
+        </div>
+        <button type="button" class="custom-submit-btn" onclick="sendCustomDesignWhatsApp()">📤 Send Custom Design on WhatsApp</button>
     </div>
 
     <div class="reviews-section">
@@ -636,6 +730,29 @@
             } catch(e) {}
         }
 
+        // Custom Design WhatsApp Forward Script
+        function sendCustomDesignWhatsApp() {
+            var name = document.getElementById('custName').value.trim();
+            var phone = document.getElementById('custPhone').value.trim();
+            var details = document.getElementById('custDetails').value.trim();
+
+            if(name === "" || phone === "") {
+                alert("Please enter your Name and Phone Number!");
+                return;
+            }
+
+            var whatsappNumber = "923108127937";
+            var message = "Hello! I want to order a *Custom Design T-Shirt*.\n\n" +
+                          "👤 *Customer Name:* " + name + "\n" +
+                          "📞 *Phone Number:* " + phone + "\n" +
+                          "📝 *Design Details:* " + (details ? details : "Will send design image on WhatsApp chat.") + "\n\n" +
+                          "(Price range info needed: Rs. 1799 to Rs. 2500 based on fabric/print size)";
+
+            var encodedMessage = encodeURIComponent(message);
+            var url = "https://wa.me/" + whatsappNumber + "?text=" + encodedMessage;
+            window.open(url, '_blank');
+        }
+
         // Live Sales & Order Popups script
         const notifications = [
             "<span>Hamza</span> ne BMW T-Shirt ka order confirm kiya! 🔥",
@@ -650,7 +767,6 @@
             const popup = document.getElementById('live-popup');
             const popupText = document.getElementById('popup-text');
             
-            // Random notification pick
             const randomMsg = notifications[Math.floor(Math.random() * notifications.length)];
             popupText.innerHTML = randomMsg;
             
@@ -658,15 +774,15 @@
             
             setTimeout(function() {
                 popup.style.display = 'none';
-            }, 4000); // 4 seconds show time
+            }, 4000);
         }
 
-        // Trigger popups every 7 seconds after website entry
         setInterval(showPopup, 7000);
     </script>
 
 </body>
 </html>
+
 
 
 
