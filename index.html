@@ -1,787 +1,205 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ur" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Khass Collections | Gen Z Streetwear</title>
+    <title>14 اگست - جشنِ آزادی سیل</title>
     <style>
-        * {
-            box-sizing: border-box;
+        :root {
+            --pak-green: #01411c;
+            --pak-white: #ffffff;
+            --pak-accent: #006400;
+        }
+
+        body {
+            font-family: 'Jameel Noori Nastaleeq', Arial, sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #f4f9f4;
+            color: #333;
         }
-        body {
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            background-color: #0c0c0c;
-            color: #ffffff;
+
+        /* 14 اگست ٹاپ بینر */
+        .independence-banner {
+            background: linear-gradient(135deg, var(--pak-green), #035423);
+            color: var(--pak-white);
             text-align: center;
-            overflow-x: hidden;
+            padding: 15px;
+            font-size: 24px;
+            font-weight: bold;
+            border-bottom: 5px solid #ffcc00;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
 
-        :root {
-            --main-neon: #00f2fe;
-            --accent-neon: #4facfe;
-            --highlight: #ff6b00;
-            --card-bg: #161616;
-            --btn-whatsapp: #25d366;
-            --tiktok-color: #fe2c55;
-        }
-
-        /* Fast Left-to-Right Entry Screen */
-        #splash-screen {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            background-color: #050505;
+        /* جھنڈیوں اور ڈیکوریشن کا اسٹایل */
+        .flag-decor {
             display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            z-index: 99999;
-            transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
+            justify-content: space-around;
+            background: var(--pak-white);
+            padding: 10px;
+            border-bottom: 2px dashed var(--pak-green);
         }
 
-        #splash-screen.slide-out {
-            transform: translateX(100%);
-            opacity: 0;
-            pointer-events: none;
+        .flag-icon {
+            font-size: 22px;
         }
 
-        .slider-wrapper {
-            width: 300px;
-            height: 350px;
-            overflow: hidden;
-            border-radius: 20px;
-            border: 2px solid var(--main-neon);
-            box-shadow: 0 0 40px rgba(0, 242, 254, 0.3);
-            margin-bottom: 30px;
-            position: relative;
+        /* مین ہیڈر */
+        header {
+            text-align: center;
+            padding: 30px;
+            background-color: var(--pak-white);
         }
 
-        .shirts-slider {
-            display: flex;
-            width: calc(300px * 12);
-            height: 100%;
-            animation: fastSlideLeft 12s infinite linear;
-        }
-
-        .slide-card {
-            width: 300px;
-            height: 100%;
-            flex-shrink: 0;
-        }
-
-        .slide-card img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        @keyframes fastSlideLeft {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(calc(-300px * 12)); }
-        }
-
-        .splash-brand-title {
+        header h1 {
+            color: var(--pak-green);
             font-size: 38px;
-            font-weight: 900;
-            letter-spacing: 5px;
-            color: #ffffff;
-            text-shadow: 0 0 15px var(--main-neon);
-            text-transform: uppercase;
             margin-bottom: 5px;
         }
 
-        .splash-brand-sub {
-            font-size: 13px;
-            color: #aaaaaa;
-            letter-spacing: 3px;
-            margin-bottom: 30px;
-            text-transform: uppercase;
+        header p {
+            color: #666;
+            font-size: 18px;
         }
 
-        .enter-circle-btn {
-            width: 90px;
-            height: 90px;
-            border-radius: 50%;
-            background: transparent;
-            border: 2px solid var(--main-neon);
-            color: var(--main-neon);
-            font-size: 14px;
-            font-weight: bold;
-            letter-spacing: 2px;
-            cursor: pointer;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-transform: uppercase;
-            transition: all 0.3s ease;
-            animation: circlePulse 2s infinite;
-        }
-
-        .enter-circle-btn:hover {
-            background-color: var(--main-neon);
-            color: #000000;
-            transform: scale(1.1);
-            box-shadow: 0 0 40px rgba(0, 242, 254, 0.9);
-        }
-
-        @keyframes circlePulse {
-            0% { box-shadow: 0 0 0 0 rgba(0, 242, 254, 0.6); }
-            70% { box-shadow: 0 0 0 20px rgba(0, 242, 254, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(0, 242, 254, 0); }
-        }
-
-        header {
-            background-color: #121212;
-            padding: 25px;
-            font-size: 28px;
-            font-weight: 900;
-            letter-spacing: 3px;
-            color: var(--main-neon);
-            text-shadow: 0 0 10px rgba(0, 242, 254, 0.5);
-            box-shadow: 0 3px 15px rgba(0,0,0,0.7);
-            text-transform: uppercase;
-        }
-
-        .hero {
-            padding: 40px 20px;
-        }
-
-        .hero h1 {
-            font-size: 34px;
-            font-weight: 900;
-            color: #ffffff;
-            margin-bottom: 12px;
-            text-transform: uppercase;
-        }
-
-        .hero p {
-            color: #bbbbbb;
-            font-size: 16px;
-            margin-bottom: 25px;
-        }
-
-        .delivery-banner {
-            background-color: #161616;
-            border: 1px solid var(--highlight);
-            color: var(--highlight);
-            padding: 15px 25px;
-            border-radius: 12px;
-            display: inline-block;
-            font-size: 14px;
-            line-height: 1.6;
-            margin-bottom: 20px;
-            box-shadow: 0 0 15px rgba(255, 107, 0, 0.2);
-        }
-
-        .social-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-            margin-top: 15px;
-        }
-
-        .community-btn {
-            display: inline-block;
-            background-color: var(--btn-whatsapp);
-            color: #ffffff;
-            font-weight: bold;
-            padding: 12px 24px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-size: 14px;
-            box-shadow: 0 5px 20px rgba(37, 211, 102, 0.4);
-            transition: transform 0.3s ease;
-        }
-
-        .tiktok-btn {
-            display: inline-block;
-            background-color: var(--tiktok-color);
-            color: #ffffff;
-            font-weight: bold;
-            padding: 12px 24px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-size: 14px;
-            box-shadow: 0 5px 20px rgba(254, 44, 85, 0.4);
-            transition: transform 0.3s ease;
-        }
-
-        .community-btn:hover, .tiktok-btn:hover {
-            transform: translateY(-3px);
+        /* پروڈکٹ سیکشن اور سیل کارڈز */
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
         }
 
         .section-title {
-            font-size: 24px;
-            margin: 40px 0 25px 0;
-            color: var(--main-neon);
-            text-transform: uppercase;
-            letter-spacing: 2px;
+            text-align: center;
+            color: var(--pak-green);
+            font-size: 28px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--pak-green);
+            display: inline-block;
+            padding-bottom: 5px;
         }
 
-        /* Double Column Grid Layout for Mobile & Desktop */
-        .products-container {
+        .products-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 12px;
-            padding: 0 10px 30px 10px;
-            max-width: 700px;
-            margin: 0 auto;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
         }
 
         .product-card {
-            background-color: var(--card-bg);
-            border-radius: 12px;
-            width: 100%;
-            padding: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.6);
+            background: var(--pak-white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
             text-align: center;
-            border: 1px solid #222222;
-            transition: transform 0.3s ease, border-color 0.3s ease;
+            padding: 15px;
             position: relative;
+            transition: transform 0.3s ease;
         }
 
         .product-card:hover {
             transform: translateY(-5px);
-            border-color: var(--main-neon);
-            box-shadow: 0 8px 20px rgba(0, 242, 254, 0.2);
         }
 
-        .hot-tag {
+        /* سیل بیج */
+        .sale-badge {
             position: absolute;
-            top: 8px;
-            right: 8px;
-            background-color: var(--highlight);
-            color: #ffffff;
-            font-size: 8px;
+            top: 10px;
+            left: 10px;
+            background-color: #d9534f;
+            color: white;
+            padding: 5px 10px;
+            font-size: 12px;
             font-weight: bold;
-            padding: 3px 6px;
-            border-radius: 20px;
-            text-transform: uppercase;
+            border-radius: 3px;
         }
 
         .product-card img {
             width: 100%;
-            border-radius: 8px;
-            height: 160px;
+            height: 200px;
             object-fit: cover;
-            margin-bottom: 8px;
+            border-radius: 5px;
         }
 
-        .product-title {
-            font-size: 12px;
-            font-weight: bold;
-            color: #ffffff;
-            line-height: 1.3;
-            margin-bottom: 6px;
-            min-height: 32px;
+        .product-card h3 {
+            margin: 15px 0 10px;
+            color: #222;
         }
 
         .price {
-            font-size: 14px;
-            margin-bottom: 6px;
-        }
-
-        .old-price {
-            text-decoration: line-through;
-            color: #ee5555;
-            margin-right: 4px;
-            font-size: 12px;
-        }
-
-        .new-price {
-            color: var(--btn-whatsapp);
-            font-weight: bold;
-        }
-
-        .size-tag {
-            color: var(--main-neon);
-            font-size: 11px;
-            font-weight: bold;
-            margin-bottom: 6px;
-        }
-
-        .delivery-info {
-            color: #aaaaaa;
-            font-size: 10px;
-            margin-bottom: 8px;
-        }
-
-        .btn-whatsapp-order {
-            background-color: var(--btn-whatsapp);
-            color: #ffffff;
-            padding: 8px 6px;
-            border-radius: 20px;
-            font-size: 11px;
-            font-weight: bold;
-            text-decoration: none;
-            display: block;
-            margin: 0 auto;
-        }
-
-        /* Custom Design Section Box */
-        .custom-design-section {
-            background: linear-gradient(135deg, #141414, #1f1f1f);
-            border: 2px dashed var(--main-neon);
-            border-radius: 16px;
-            max-width: 680px;
-            margin: 30px auto;
-            padding: 25px 20px;
-            box-shadow: 0 0 30px rgba(0, 242, 254, 0.15);
-            text-align: left;
-        }
-
-        .custom-design-section h3 {
-            color: var(--main-neon);
+            color: var(--pak-green);
             font-size: 20px;
-            text-transform: uppercase;
-            text-align: center;
-            margin-bottom: 8px;
-        }
-
-        .custom-design-section p {
-            color: #cccccc;
-            font-size: 13px;
-            text-align: center;
-            margin-bottom: 20px;
-            line-height: 1.5;
-        }
-
-        .form-group {
+            font-weight: bold;
             margin-bottom: 15px;
         }
 
-        .form-group label {
-            display: block;
-            font-size: 13px;
-            color: #aaaaaa;
-            margin-bottom: 5px;
-        }
-
-        .form-control {
-            width: 100%;
-            background-color: #0c0c0c;
-            border: 1px solid #333333;
-            border-radius: 8px;
-            padding: 10px 12px;
-            color: #ffffff;
-            font-size: 14px;
-        }
-
-        .form-control:focus {
-            border-color: var(--main-neon);
-            outline: none;
-        }
-
-        .custom-submit-btn {
-            background-color: var(--btn-whatsapp);
-            color: #ffffff;
+        .buy-btn {
+            background-color: var(--pak-green);
+            color: white;
             border: none;
-            width: 100%;
-            padding: 12px;
-            border-radius: 30px;
-            font-size: 14px;
-            font-weight: bold;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
             cursor: pointer;
-            text-transform: uppercase;
-            margin-top: 10px;
-            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
-            transition: transform 0.2s ease;
+            transition: background 0.2s;
         }
 
-        .custom-submit-btn:hover {
-            transform: scale(1.02);
-        }
-
-        /* Live Sales Popup Notification Style */
-        #live-popup {
-            position: fixed;
-            bottom: 20px;
-            left: 20px;
-            background-color: rgba(22, 22, 22, 0.95);
-            border-left: 4px solid var(--btn-whatsapp);
-            color: #ffffff;
-            padding: 12px 18px;
-            border-radius: 8px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.8);
-            z-index: 9999;
-            font-size: 13px;
-            text-align: left;
-            max-width: 280px;
-            display: none;
-            animation: popupFade 0.5s ease;
-        }
-
-        #live-popup span {
-            color: var(--main-neon);
-            font-weight: bold;
-        }
-
-        @keyframes popupFade {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* Customer Reviews Section */
-        .reviews-section {
-            background-color: #121212;
-            padding: 40px 15px;
-            border-top: 1px solid #222222;
-            border-bottom: 1px solid #222222;
-            margin-top: 30px;
-        }
-
-        .reviews-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 15px;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .review-card {
-            background-color: var(--card-bg);
-            border: 1px solid #2a2a2a;
-            border-radius: 12px;
-            padding: 15px;
-            text-align: left;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-        }
-
-        .review-stars {
-            color: #ffc107;
-            font-size: 14px;
-            margin-bottom: 6px;
-        }
-
-        .review-text {
-            color: #dddddd;
-            font-size: 13px;
-            line-height: 1.4;
-            margin-bottom: 10px;
-        }
-
-        .review-author {
-            color: var(--main-neon);
-            font-size: 12px;
-            font-weight: bold;
-        }
-
-        footer {
-            background-color: #0c0c0c;
-            padding: 30px 20px;
-        }
-
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 15px;
-            flex-wrap: wrap;
-        }
-
-        .footer-links a {
-            color: #888;
-            text-decoration: none;
-            font-size: 13px;
-        }
-
-        .footer-links a:hover {
-            color: var(--main-neon);
+        .buy-btn:hover {
+            background-color: #035423;
         }
     </style>
 </head>
 <body>
 
-    <div id="live-popup">
-        <div id="popup-text"></div>
+    <div class="independence-banner">
+        ✨ 14 اگست جشنِ آزادی سیل - فلیٹ 50% تک کیچ رعنائیاں! 🇵🇰
     </div>
 
-    <div id="splash-screen">
-        <div class="slider-wrapper">
-            <div class="shirts-slider">
-                <div class="slide-card"><img src="1786083754541.png" alt="Shirt"></div>
-                <div class="slide-card"><img src="1786083849680.png" alt="Shirt"></div>
-                <div class="slide-card"><img src="1786083916060.png" alt="Shirt"></div>
-                <div class="slide-card"><img src="1786084327567.png" alt="Shirt"></div>
-                <div class="slide-card"><img src="1786096084570.png" alt="Shirt"></div>
-                <div class="slide-card"><img src="1786096274108.png" alt="Shirt"></div>
-                <div class="slide-card"><img src="1786096680372.png" alt="Shirt"></div>
-                <div class="slide-card"><img src="1786096734900.png" alt="Shirt"></div>
-                <div class="slide-card"><img src="1786096821470.png" alt="Shirt"></div>
-                <div class="slide-card"><img src="1786096883010.png" alt="Shirt"></div>
-                <div class="slide-card"><img src="1786178060059.png" alt="Shirt"></div>
-                <div class="slide-card"><img src="1786178380862.png" alt="Shirt"></div>
+    <div class="flag-decor">
+        <span class="flag-icon">🇵🇰 🟢 ⚪ 🇵🇰</span>
+        <span class="flag-icon">🎉 جشنِ آزادی مبارک 🎉</span>
+        <span class="flag-icon">🇵🇰 ⚪ 🟢 🇵🇰</span>
+    </div>
+
+    <header>
+        <h1>خصوصی آزادی کلیکشن</h1>
+        <p>یومِ آزادی کے اس بابرکت موقع پر ہمارے خاص پروڈکٹس پر بہترین ڈسکاؤنٹ حاصل کریں!</p>
+    </header>
+
+    <div class="container">
+        <div style="text-align: center;">
+            <h2 class="section-title">آزادی سیل کے نمایاں آئٹمز</h2>
+        </div>
+
+        <div class="products-grid">
+            <div class="product-card">
+                <span class="sale-badge">14 اگست اسپیشل</span>
+                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30" alt="Product">
+                <h3>پریمیم واچ کلیکشن</h3>
+                <div class="price">Rs. 2,499 <del style="color:#999; font-size:14px;">Rs. 4,999</del></div>
+                <button class="buy-btn">ابھی خریدیے</button>
             </div>
-        </div>
 
-        <div class="splash-brand-title">KHASS COLLECTIONS</div>
-        <div class="splash-brand-sub">Premium Gen Z Streetwear</div>
-
-        <button class="enter-circle-btn" id="enterBtn" onclick="enterWebsite()">ENTER</button>
-    </div>
-
-    <header>KHASS COLLECTIONS</header>
-
-    <div class="hero">
-        <h1>Gen Z Oversized T-Shirts</h1>
-        <p>Premium Quality Graphic & Drop Shoulder Tees</p>
-        
-        <div class="delivery-banner">
-            🚚 <b>Delivery:</b> Within 1 Week All Over Pakistan<br>
-            💳 <b>Payment:</b> Rs. 350 Delivery Charges Advance (Cash on Delivery Available)
-        </div>
-        <br>
-        <div class="social-buttons">
-            <a href="https://chat.whatsapp.com/EmFtyz1i2QD0IkFC3jJ4fb" target="_blank" class="community-btn">
-                💬 Join WhatsApp VIP Group
-            </a>
-            <a href="https://www.tiktok.com/@khasscollections" target="_blank" class="tiktok-btn">
-                🎵 Follow on TikTok
-            </a>
-        </div>
-    </div>
-
-    <h2 class="section-title">Trending Collection</h2>
-    <div class="products-container">
-
-        <div class="product-card">
-            <div class="hot-tag">🔥 HOT</div>
-            <img src="1786083754541.png" alt="BMW Car Down Shoulder Oversized T-Shirt">
-            <div class="product-title">BMW Car Down Shoulder Oversized T-Shirt</div>
-            <div class="price"><span class="old-price">Rs. 1,799</span><span class="new-price">Rs. 1,199</span></div>
-            <div class="size-tag">Sizes: M | L | XL</div>
-            <div class="delivery-info">Delivery: within 1 week</div>
-            <a href="https://wa.me/923108127937?text=Hello%21%20I%20want%20to%20order%20BMW%20Car%20Down%20Shoulder%20Oversized%20T-Shirt%20%28Rs.%201199%29" class="btn-whatsapp-order">Order on WhatsApp</a>
-        </div>
-
-        <div class="product-card">
-            <img src="1786083849680.png" alt="Built From Pain Oversized Down Shoulder T-Shirt">
-            <div class="product-title">Built From Pain Oversized Down Shoulder T-Shirt</div>
-            <div class="price"><span class="old-price">Rs. 1,799</span><span class="new-price">Rs. 1,199</span></div>
-            <div class="size-tag">Sizes: M | L | XL</div>
-            <div class="delivery-info">Delivery: within 1 week</div>
-            <a href="https://wa.me/923108127937?text=Hello%21%20I%20want%20to%20order%20Built%20From%20Pain%20Oversized%20T-Shirt%20%28Rs.%201199%29" class="btn-whatsapp-order">Order on WhatsApp</a>
-        </div>
-
-        <div class="product-card">
-            <div class="hot-tag">🔥 HOT</div>
-            <img src="1786083916060.png" alt="Spider-Man Oversized Down Shoulder T-Shirt">
-            <div class="product-title">Spider-Man Oversized Down Shoulder T-Shirt</div>
-            <div class="price"><span class="old-price">Rs. 1,799</span><span class="new-price">Rs. 1,199</span></div>
-            <div class="size-tag">Sizes: M | L | XL</div>
-            <div class="delivery-info">Delivery: within 1 week</div>
-            <a href="https://wa.me/923108127937?text=Hello%21%20I%20want%20to%20order%20Spider-Man%20Oversized%20T-Shirt%20%28Rs.%201199%29" class="btn-whatsapp-order">Order on WhatsApp</a>
-        </div>
-
-        <div class="product-card">
-            <img src="1786084327567.png" alt="Porsche 911 Car Lovers Oversized T-Shirt">
-            <div class="product-title">Porsche 911 Car Lovers Oversized T-Shirt</div>
-            <div class="price"><span class="old-price">Rs. 1,799</span><span class="new-price">Rs. 1,199</span></div>
-            <div class="size-tag">Sizes: M | L | XL</div>
-            <div class="delivery-info">Delivery: within 1 week</div>
-            <a href="https://wa.me/923108127937?text=Hello%21%20I%20want%20to%20order%20Porsche%20911%20T-Shirt%20%28Rs.%201199%29" class="btn-whatsapp-order">Order on WhatsApp</a>
-        </div>
-
-        <div class="product-card">
-            <img src="1786096084570.png" alt="Luffy Gear 5 Down Shoulder Oversized T-Shirt">
-            <div class="product-title">Luffy Gear 5 Down Shoulder Oversized T-Shirt</div>
-            <div class="price"><span class="old-price">Rs. 1,799</span><span class="new-price">Rs. 1,199</span></div>
-            <div class="size-tag">Sizes: M | L | XL</div>
-            <div class="delivery-info">Delivery: within 1 week</div>
-            <a href="https://wa.me/923108127937?text=Hello%21%20I%20want%20to%20order%20Luffy%20Gear%205%20T-Shirt%20%28Rs.%201199%29" class="btn-whatsapp-order">Order on WhatsApp</a>
-        </div>
-
-        <div class="product-card">
-            <img src="1786096274108.png" alt="Sabr Gift From God Oversized T-Shirt">
-            <div class="product-title">"Sabr" - Gift From God Oversized T-Shirt</div>
-            <div class="price"><span class="old-price">Rs. 1,799</span><span class="new-price">Rs. 1,199</span></div>
-            <div class="size-tag">Sizes: M | L | XL</div>
-            <div class="delivery-info">Delivery: within 1 week</div>
-            <a href="https://wa.me/923108127937?text=Hello%21%20I%20want%20to%20order%20Sabr%20Oversized%20T-Shirt%20%28Rs.%201199%29" class="btn-whatsapp-order">Order on WhatsApp</a>
-        </div>
-
-        <div class="product-card">
-            <img src="1786096680372.png" alt="Tawakkal On God Aesthetic Oversized T-Shirt">
-            <div class="product-title">"Tawakkal On God" Aesthetic Oversized T-Shirt</div>
-            <div class="price"><span class="old-price">Rs. 1,799</span><span class="new-price">Rs. 1,199</span></div>
-            <div class="size-tag">Sizes: M | L | XL</div>
-            <div class="delivery-info">Delivery: within 1 week</div>
-            <a href="https://wa.me/923108127937?text=Hello%21%20I%20want%20to%20order%20Tawakkal%20Oversized%20T-Shirt%20%28Rs.%201199%29" class="btn-whatsapp-order">Order on WhatsApp</a>
-        </div>
-
-        <div class="product-card">
-            <img src="1786096734900.png" alt="Zindagi Down Shoulder T-Shirt">
-            <div class="product-title">"Zindagi" Down Shoulder (100% Cotton) T-Shirt</div>
-            <div class="price"><span class="old-price">Rs. 1,799</span><span class="new-price">Rs. 1,199</span></div>
-            <div class="size-tag">Sizes: M | L | XL</div>
-            <div class="delivery-info">Delivery: within 1 week</div>
-            <a href="https://wa.me/923108127937?text=Hello%21%20I%20want%20to%20order%20Zindagi%20T-Shirt%20%28Rs.%201199%29" class="btn-whatsapp-order">Order on WhatsApp</a>
-        </div>
-
-        <div class="product-card">
-            <img src="1786096821470.png" alt="Ferrari F1 Formula Car Driver Oversized T-Shirt">
-            <div class="product-title">Ferrari F1 Formula Car Driver Oversized T-Shirt</div>
-            <div class="price"><span class="old-price">Rs. 1,799</span><span class="new-price">Rs. 1,199</span></div>
-            <div class="size-tag">Sizes: M | L | XL</div>
-            <div class="delivery-info">Delivery: within 1 week</div>
-            <div class="delivery-info">Delivery: within 1 week</div>
-            <a href="https://wa.me/923108127937?text=Hello%21%20I%20want%20to%20order%20Ferrari%20F1%20T-Shirt%20%28Rs.%201199%29" class="btn-whatsapp-order">Order on WhatsApp</a>
-        </div>
-
-        <div class="product-card">
-            <img src="1786096883010.png" alt="Formula Car Driver T-Shirt">
-            <div class="product-title">Formula Car Driver T-Shirt (100% Cotton)</div>
-            <div class="price"><span class="old-price">Rs. 1,799</span><span class="new-price">Rs. 1,199</span></div>
-            <div class="size-tag">Sizes: M | L | XL</div>
-            <div class="delivery-info">Delivery: within 1 week</div>
-            <a href="https://wa.me/923108127937?text=Hello%21%20I%20want%20to%20order%20Formula%20Car%20Driver%20T-Shirt%20%28Rs.%201199%29" class="btn-whatsapp-order">Order on WhatsApp</a>
-        </div>
-
-        <div class="product-card">
-            <img src="1786178060059.png" alt="86 New York Down Shoulder T-Shirt">
-            <div class="product-title">86 New York (100% Cotton) Down Shoulder T-Shirt</div>
-            <div class="price"><span class="old-price">Rs. 1,799</span><span class="new-price">Rs. 1,199</span></div>
-            <div class="size-tag">Sizes: M | L | XL</div>
-            <div class="delivery-info">Delivery: within 1 week</div>
-            <a href="https://wa.me/923108127937?text=Hello%21%20I%20want%20to%20order%2086%20New%20York%20T-Shirt%20%28Rs.%201199%29" class="btn-whatsapp-order">Order on WhatsApp</a>
-        </div>
-
-        <div class="product-card">
-            <img src="1786178380862.png" alt="Goku Anime Lover Down Shoulder Oversized T-Shirt">
-            <div class="product-title">Goku Anime Lover Down Shoulder Oversized T-Shirt</div>
-            <div class="price"><span class="old-price">Rs. 1,799</span><span class="new-price">Rs. 1,199</span></div>
-            <div class="size-tag">Sizes: M | L | XL</div>
-            <div class="delivery-info">Delivery: within 1 week</div>
-            <a href="https://wa.me/923108127937?text=Hello%21%20I%20want%20to%20order%20Goku%20Anime%20T-Shirt%20%28Rs.%201199%29" class="btn-whatsapp-order">Order on WhatsApp</a>
-        </div>
-
-    </div>
-
-    <div class="custom-design-section">
-        <h3>🎨 Want a Custom Design T-Shirt?</h3>
-        <p>Apna pasandeeda design ya logo bhejen! Price <b>Rs. 1,799 say Rs. 2,500</b> tak hoti hai jo ke print ke size aur fabric ke hisaab say decide hoti hai.</p>
-        
-        <div class="form-group">
-            <label for="custName">Aap ka Naam:</label>
-            <input type="text" id="custName" class="form-control" placeholder="Enter your full name">
-        </div>
-        <div class="form-group">
-            <label for="custPhone">Aap ka Phone Number:</label>
-            <input type="text" id="custPhone" class="form-control" placeholder="Enter your WhatsApp number">
-        </div>
-        <div class="form-group">
-            <label for="custDetails">Design / Instructions Details:</label>
-            <textarea id="custDetails" class="form-control" rows="3" placeholder="Bataen ke aapko kaisa design chahiye (Color, Size, Placement etc.)"></textarea>
-        </div>
-        <button type="button" class="custom-submit-btn" onclick="sendCustomDesignWhatsApp()">📤 Send Custom Design on WhatsApp</button>
-    </div>
-
-    <div class="reviews-section">
-        <h2 class="section-title" style="margin-top: 0;">What Our Customers Say</h2>
-        <div class="reviews-container">
-            <div class="review-card">
-                <div class="review-stars">★★★★★</div>
-                <div class="review-text">"Shirt ki quality bohat hi zabardast hai! Oversized fit bilkul waise hi hai jaisi tasweer mein thi. Highly recommended!"</div>
-                <div class="review-author">— Hamza Ali (Lahore)</div>
+            <div class="product-card">
+                <span class="sale-badge">50% آف</span>
+                <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e" alt="Product">
+                <h3>اسپیشل ساؤنڈ پروڈکٹ</h3>
+                <div class="price">Rs. 1,999 <del style="color:#999; font-size:14px;">Rs. 3,999</del></div>
+                <button class="buy-btn">ابھی خریدیے</button>
             </div>
-            <div class="review-card">
-                <div class="review-stars">★★★★★</div>
-                <div class="review-text">"Fabric bohat comfortable hai aur delivery bhi time par mil gayi thi. Main dobara order kar raha hoon."</div>
-                <div class="review-author">— Usman Khan (Karachi)</div>
-            </div>
-            <div class="review-card">
-                <div class="review-stars">★★★★★</div>
-                <div class="review-text">"Print quality amazing hai, wash karne ke baad bhi color kharab nahi hua. Great streetwear brand!"</div>
-                <div class="review-author">— Daniyal Ahmed (Islamabad)</div>
+
+            <div class="product-card">
+                <span class="sale-badge">آزادی ڈیل</span>
+                <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f" alt="Product">
+                <h3>آزادی اسپیشل کٹ</h3>
+                <div class="price">Rs. 1,499 <del style="color:#999; font-size:14px;">Rs. 2,999</del></div>
+                <button class="buy-btn">ابھی خریدیے</button>
             </div>
         </div>
     </div>
-
-    <footer>
-        <div class="footer-links">
-            <a href="https://wa.me/923108127937" target="_blank">Contact Us</a>
-            <a href="https://www.tiktok.com/@khasscollections" target="_blank">TikTok</a>
-            <a href="https://chat.whatsapp.com/EmFtyz1i2QD0IkFC3jJ4fb" target="_blank">WhatsApp Group</a>
-        </div>
-        <p style="color: #666; font-size: 12px; margin-top: 20px;">&copy; 2026 Khass Collections. All Rights Reserved.</p>
-    </footer>
-
-    <script>
-        function enterWebsite() {
-            var splash = document.getElementById('splash-screen');
-            if (splash) {
-                splash.classList.add('slide-out');
-                setTimeout(function() {
-                    splash.style.display = 'none';
-                }, 600);
-            }
-
-            try {
-                var audio = new Audio('music.mp3');
-                audio.loop = true;
-                audio.play().catch(function(e) {
-                    console.log("Audio skipped due to browser policy.");
-                });
-            } catch(e) {}
-        }
-
-        // Custom Design WhatsApp Forward Script
-        function sendCustomDesignWhatsApp() {
-            var name = document.getElementById('custName').value.trim();
-            var phone = document.getElementById('custPhone').value.trim();
-            var details = document.getElementById('custDetails').value.trim();
-
-            if(name === "" || phone === "") {
-                alert("Please enter your Name and Phone Number!");
-                return;
-            }
-
-            var whatsappNumber = "923108127937";
-            var message = "Hello! I want to order a *Custom Design T-Shirt*.\n\n" +
-                          "👤 *Customer Name:* " + name + "\n" +
-                          "📞 *Phone Number:* " + phone + "\n" +
-                          "📝 *Design Details:* " + (details ? details : "Will send design image on WhatsApp chat.") + "\n\n" +
-                          "(Price range info needed: Rs. 1799 to Rs. 2500 based on fabric/print size)";
-
-            var encodedMessage = encodeURIComponent(message);
-            var url = "https://wa.me/" + whatsappNumber + "?text=" + encodedMessage;
-            window.open(url, '_blank');
-        }
-
-        // Live Sales & Order Popups script
-        const notifications = [
-            "<span>Hamza</span> ne BMW T-Shirt ka order confirm kiya! 🔥",
-            "<span>Ali Shah</span> ka order successfully deliver ho gaya! 🚚",
-            "<span>Usman</span> ne 2 Oversized Tees order کی ہیں! ⭐",
-            "<span>Bilal Khan</span> ne Spider-Man T-Shirt ka order confirm kiya! ✅",
-            "<span>Zain Ali</span> ka order dispatch ho gaya (Karachi)! 📦",
-            "<span>Faizan</span> ne Goku Anime T-Shirt ka order confirm kiya! ⚡"
-        ];
-
-        function showPopup() {
-            const popup = document.getElementById('live-popup');
-            const popupText = document.getElementById('popup-text');
-            
-            const randomMsg = notifications[Math.floor(Math.random() * notifications.length)];
-            popupText.innerHTML = randomMsg;
-            
-            popup.style.display = 'block';
-            
-            setTimeout(function() {
-                popup.style.display = 'none';
-            }, 4000);
-        }
-
-        setInterval(showPopup, 7000);
-    </script>
 
 </body>
 </html>
+
 
 
 
